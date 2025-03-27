@@ -1,0 +1,343 @@
+/* for some reason, putting font-family in root doesn't work */
+:root {
+    /* CSS HEX */
+    --pale-azure: #70d6ffff;
+    --cyclamen: #ff70a6ff;
+    --atomic-tangerine: #ff9770ff;
+    --naples-yellow: #ffd670ff;
+    --mindaro: #e9ff70ff;
+    --blue-green: #0096c7;
+    --aero: #70C9E7;
+    /* CSS HSL */
+    --pale-azure: hsla(197, 100%, 72%, 1);
+    --cyclamen: hsla(337, 100%, 72%, 1);
+    --atomic-tangerine: hsla(16, 100%, 72%, 1);
+    --naples-yellow: hsla(43, 100%, 72%, 1);
+    --mindaro: hsla(69, 100%, 72%, 1);
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: var(--pale-azure);
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.highlight-blue {
+    background-color: var(--aero);
+}
+
+.highlight-orange {
+    background-color: var(--atomic-tangerine);
+}
+
+h1 {
+    text-align: center;
+    font-weight: 600;
+}
+
+.main {
+    padding: 0 10%;
+}
+
+.navbar {
+    padding: 15px 20%;
+}
+
+.nav-item {
+    padding: 0px 20px;
+}
+
+.about {
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#about {
+    font-weight: 600;
+    padding: 20px;
+    font-size: 3em;
+    background-color: var(--naples-yellow);
+}
+
+.about-para {
+    text-align: end;
+}
+
+.about-para>span {
+    background-color: #0096c7aa;
+}
+
+.about>.image {
+    margin: 10px;
+    padding: 10px;
+    border: 1px black solid;
+    border-radius: 6px;
+    background-color: white;
+    max-height: 400px;
+}
+
+.about>.text {
+    text-align: center;
+    padding: 10px 10%;
+}
+
+.technologies>h1 {
+    background-color: var(--mindaro);
+}
+
+#projects {
+    text-align: center;
+    font-weight: 600;
+    padding: 3px;
+    background-color: var(--mindaro);
+}
+
+#projects>span {
+    /* background-color: var(--naples-yellow); */
+    /* padding: 8px 15px; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: infiniteHover 2s infinite;
+}
+
+.safedrive-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+    margin: 10px;
+}
+
+.safedrive-images>div {
+    border: 1px solid black;
+    padding: 15px 30px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+
+    transition: transform 0.8s ease, box-shadow 0.8s ease;
+}
+
+.safedrive-images>div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.safedrive-images>div>span {
+    background-color: var(--mindaro);
+    padding: 0 5px;
+}
+
+.tech-stack {
+    padding-left: 5%;
+}
+
+.tech-stack-list {
+    font-size: 1.1em;
+}
+
+#safedrive-image-heading {
+    padding: 0 5%;
+}
+
+.hobbies {
+    /* height: 100px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    font-size: 2.5em;
+    /* padding: 10px 0; */
+}
+
+.hobby {
+    padding: 0 10px;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: infiniteHover 2s infinite;
+}
+
+.other-frontend-projects {
+    padding: 10px 0 0;
+}
+
+#hobbies {
+    background-color: var(--cyclamen);
+}
+
+.changed-text::after {
+    content: "sleeping";
+    animation: textChange 10s infinite;
+}
+
+.contact>h1 {
+    text-align: center;
+    background-color: var(--mindaro);
+}
+
+.contact>p {
+    font-size: 1.2em;
+    padding: 0 5%;
+    text-align: center;
+}
+
+.contact-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact-link {
+    width: 20%;
+    min-width: 200px;
+}
+
+.contact-grid>a>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+
+    padding: 10px 0 15px;
+    margin: 10px 20px;
+    border: 1px solid black;
+    border-radius: 6px;
+
+    background-color: #99ccff;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-grid>a>div:hover {
+    animation: rainbowLoop 5s infinite;
+}
+
+@keyframes textChange {
+    0% {
+        content: "sleeping";
+        background-color: #aaa;
+    }
+
+    12% {
+        content: "listening to Spotify";
+        background-color: #76c893;
+    }
+
+    25% {
+        content: "watching anime";
+        background-color: #f76c5e;
+    }
+
+    37% {
+        content: "playing basketball";
+        background-color: #ff6b35cc;
+    }
+
+    50% {
+        content: "reading articles on Medium";
+        background-color: black;
+    }
+
+    62% {
+        content: "eating junk food";
+        background-color: var(--naples-yellow);
+    }
+
+    75% {
+        content: "playing video games";
+        background-color: #1b4965;
+    }
+
+    87% {
+        content: "watching horror";
+        background-color: #414833aa;
+    }
+
+    100% {
+        content: "sleeping";
+        background-color: #aaa;
+    }
+}
+
+@keyframes infiniteHover {
+    0% {
+        transform: translateY(0);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+    }
+
+    100% {
+        transform: translateY(0);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+}
+
+@keyframes rainbowLoop {
+
+    0% {
+        background-color: #99ccff;
+    }
+
+    20% {
+        background-color: #ffb3cc;
+    }
+
+    40% {
+        background-color: #ffcc99;
+    }
+
+    60% {
+        background-color: #ffff99;
+    }
+
+    80% {
+        background-color: #99ff99;
+    }
+
+    100% {
+        background-color: #99ccff;
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about>.image {
+        max-width: 400px;
+        padding-bottom: 60px;
+    }
+
+    .safedrive-images {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .safedrive-images>div {
+        margin: 10px 0;
+        min-width: 300px;
+    }
+
+}
